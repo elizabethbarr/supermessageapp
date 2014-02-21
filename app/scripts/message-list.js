@@ -11,14 +11,6 @@ var MessageView = Backbone.View.extend({
 
 	},
 
-
-	///setMainItem: function(){
-		//new MainView({model: this.model})
-
-		//console.log(this.model.attributes)
-
-	//},
-
 	render: function(){
 		var renderedTemplate = this.createTemplate( this.model.attributes )
 

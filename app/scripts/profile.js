@@ -2,7 +2,7 @@ var Profile = Backbone.Model.extend({
 	defaults: {
 	options: {},
   	username: 'Tyler',
-  	messageText: " ",
+  	messageText: "skittles ",
   	messageDate: _.now(),
   	appId: "Team BCH"
 	}
