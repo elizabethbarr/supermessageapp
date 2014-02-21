@@ -37,6 +37,9 @@ $('.js-input-submit').click(function(){
 	new MessageView({model: freshModel});
 
 	freshModel.save()
+
+	var moment = require('moment');
+		moment().format();
 });
 
 });
