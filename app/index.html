@@ -29,28 +29,38 @@
 
         <div class="container">
             <div class="header">
-                <ul class="nav nav-pills pull-right">
-                </ul>
+                <button class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#myModal">
+              Join Chat App!
+                </button>
                 <h3 class="text-muted">Chat App</h3>
             </div>
 
+
+
+            <!-- Jumbotron -->
             <div class="jumbotron">
-
-
-                <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-              Join Chat App!
-                </button>
                 <div class="row">
-                <div class="app col-md-6 col-md-offset-3">
-                    <div class="input-group">
+                <div class="app col-md-12">
+
+
+                    
+                    <div class="js-full-list full-list"></div>
+                     
+
+
+                    <div class="input-group text-input">
                         <input type="text" class="form-control js-message-input new-todo-input">
                         <span class="input-group-btn">
-                        <button class="btn btn-default js-input-submit add-button" type="button">Add</button>
+                            <button class="btn btn-default js-input-submit add-button" type="button">Send</button>
                         </span>
                     </div><!-- /input-group -->
                     <div class="todo-items js-todo-items"></div><!-- The style is set and will be removed once javascript is set. -->
                 </div>
             </div>
+
+
+
+
             <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -74,21 +84,23 @@
             </div>
 
             <div class="row marketing">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="js-full-list"></div>
+                </div> -->
+            </div>
                     
 
-                </div>
-            </div>
 
             
 
         </div>
 
         <script type="text/template" id="message-list-template">
-            <p><%= username %></p>
-            <p><%= messageText %></p>
-            <p><%= messageDate %></p>
+            <div class="together">
+                <h1><%= username %></h1>
+                <p><%= messageText %></p>
+                <h2><%= messageDate %></h2>
+            </div>
         </script>        
 
 

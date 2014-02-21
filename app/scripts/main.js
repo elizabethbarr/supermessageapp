@@ -8,6 +8,7 @@ $(document).ready(function(){
 		success: function(){
 			profile.each(function(message){
 				new MessageView({model: message});
+				$('.full-list').scrollTop($('.full-list')[0].scrollHeight);
 			})
 		},
 
@@ -17,26 +18,27 @@ $(document).ready(function(){
 	});
 
 
- $('.add-album-button').click(function(){
+ newUser = $('.add-album-button').click(function(){
 
- 	window.newUser = $('.js-username').val()
+ $('.js-username').val()
  });
 
 
 
 
-$('.js-input-submit').click(function(){
+	$('.js-input-submit').click(function(){
 
-	var message = new Profile()
+		var message = new Profile()
 
-		if($('.js-message-input').val()) {message.set({messageText: $('.js-message-input').val()})};
-		if(newUser) {message.set({username: $('.js-username').val()})};
+			if($('.js-message-input').val()) {message.set({messageText: $('.js-message-input').val()})};
+			if(newUser) {message.set({username: $('.js-username').val()})};
 
-	var freshModel = profile.add(message);
+		var freshModel = profile.add(message);
 
-	new MessageView({model: freshModel});
+		new MessageView({model: freshModel});
 
-	freshModel.save()
+		freshModel.save()
+	});
+
 });
 
-});
