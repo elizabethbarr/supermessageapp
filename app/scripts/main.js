@@ -25,21 +25,19 @@ $(document).ready(function(){
 
 
 
-$('.js-input-submit').click(function(){
+	$('.js-input-submit').click(function(){
 
-	var message = new Profile()
+		var message = new Profile()
 
-		if($('.js-message-input').val()) {message.set({messageText: $('.js-message-input').val()})};
-		if(newUser) {message.set({username: $('.js-username').val()})};
+			if($('.js-message-input').val()) {message.set({messageText: $('.js-message-input').val()})};
+			if(newUser) {message.set({username: $('.js-username').val()})};
 
-	var freshModel = profile.add(message);
+		var freshModel = profile.add(message);
 
-	new MessageView({model: freshModel});
+		new MessageView({model: freshModel});
 
-	freshModel.save()
+		freshModel.save()
 
-	var moment = require('moment');
-		moment().format();
-});
+	});
 
 });

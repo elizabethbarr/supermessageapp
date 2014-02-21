@@ -88,18 +88,17 @@
         <script type="text/template" id="message-list-template">
             <p><%= username %></p>
             <p><%= messageText %></p>
-            <p><%= messageDate %></p>
+            <p><%= moment(messageDate).format('MMMM Do YYYY, h:mm:ss a') %></p>
         </script>        
 
-        <script>moment().format();</script>
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/momentjs/moment.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
-        <script src="bower_components/moment/moment.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -133,7 +132,6 @@
         <script src="scripts/main.js"></script>
         <script src="scripts/profile.js"></script>
         <script src="scripts/message-list.js"></script>
-        <script src="scripts/moment.js"></script>
         <!-- endbuild -->
 </body>
 </html>
